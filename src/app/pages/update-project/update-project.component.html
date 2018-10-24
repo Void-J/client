@@ -1,0 +1,33 @@
+<form *ngIf="project">
+
+  <div class="row">
+
+    <div class="col">
+        <div class="form-group">
+            <label>Nom du projet</label>
+            <input type="text" class="form-control" placeholder="nom" [value]="project.name" (change)="formUpdate.name = $event.target.value">
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="form-group">
+            <label>Déscription</label>
+            <input type="text" class="form-control" placeholder="description" [value]="project.description" (change)="formUpdate.description = $event.target.value">
+        </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+        <div class="form-group">
+            <label>Statut d'avancement</label>
+            <input type="text" class="form-control" placeholder="status" [value]="project.status" (change)="formUpdate.status = $event.target.value">
+        </div>
+    </div>
+
+  </div>
+  <button type="button" name="button" class="btn btn-info" (click)=updateProject(project.id)>modifier</button>
+
+</form>

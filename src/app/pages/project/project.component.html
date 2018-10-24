@@ -1,0 +1,34 @@
+
+<div class="project-details" *ngIf="project">
+
+  <h4 class="mb-5">Fiche projet : {{project.title}}</h4>
+
+      <div class="row">
+
+          <div class="col-xs-12 col-md-2">
+              <strong>Nom</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.name|uppercase}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>description</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.description}}
+          </div>
+          <div class="col-xs-12 col-md-2">
+              <strong>status</strong>
+          </div>
+          <div class="col-xs-12 col-md-10">
+              {{project.status}}
+          </div>
+
+      </div>
+      
+      <div class="mt-5">
+          <a routerLink="/update/{{project._id}}" class="btn btn-primary">Modifier ce projet</a>
+          <button type="button" name="button" class="btn btn-danger" (click)="deleteProject(project.id)">Supprimer ce projet</button>
+      </div>
+
+</div>

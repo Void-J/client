@@ -1,0 +1,26 @@
+<form>
+  <div class="row">
+      <div class="col">
+          <div class="form-group">
+              <label>Nom du projet</label>
+              <input type="text" class="form-control" placeholder="Nom" [value]="formCreate.name" (change)="formCreate.name = $event.target.value">
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="form-group">
+              <label>Déscription</label>
+              <input type="text" class="form-control" placeholder="Description" [value]="formCreate.description" (change)="formCreate.description = $event.target.value">
+          </div>
+      </div>
+      <div class="col">
+          <div class="form-group">
+              <label>Status d'avancement</label>
+              <input type="text" class="form-control" placeholder="status" [value]="formCreate.status" (change)="formCreate.status = $event.target.value">
+          </div>
+      </div>
+  </div>
+  <button type="button" name="button" class="btn btn-info" (click)=createProject()>Ajouter</button>
+
+</form>
