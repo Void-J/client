@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Flamenco|Mrs+Sheppards');
 .brand-box {
     font-family: 'Mrs Sheppards', cursive;
-    color: #2e2e2e;
+    color: #fff;
     padding: 30px 50px;
     font-size: 60px;
 }
@@ -10,11 +10,13 @@ a:hover {
     text-decoration: none !important;
 }
 
-header{
-    padding:10px;
+header {
+    padding: 10px;
     text-align: center;
+    background-color: #2e2e2e;
 }
-header ul{
+
+header ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -22,13 +24,13 @@ header ul{
     padding-top: 20px;
     text-decoration: none;
 }
-header ul li a{
-    padding:10px;
-    color: #2e2e2e;
+
+header ul li a {
+    padding: 10px;
+    color: #fff;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
     letter-spacing: 2px;
     text-decoration: none;
 }
-

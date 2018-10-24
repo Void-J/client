@@ -14,6 +14,9 @@ export class UpdateProjectComponent implements OnInit {
   formUpdate={
       name:"",
       description:"",
+      currency:"",
+      startingDate:"",
+      endingDate:"",
       status:""
   }
 
@@ -34,7 +37,7 @@ ngOnInit() {
 }
 updateProject(id){
     this.projectsService
-    .updatedProject(this.formUpdate.name,this.formUpdate.description,this.formUpdate.status,this.projectId)      
+    .updatedProject(this.formUpdate.name,this.formUpdate.description, this.formUpdate.currency,this.formUpdate.startingDate, this.formUpdate.endingDate,this.formUpdate.status,this.projectId)      
 }
 
 }

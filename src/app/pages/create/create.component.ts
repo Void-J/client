@@ -13,7 +13,9 @@ export class CreateComponent implements OnInit {
     formCreate={
     name:"",
     username:"",
-    website:""
+    website:"",
+    mail:"",
+    phone:""
     }
 
     constructor(private usersService:UsersService,private route:Router) {
@@ -27,7 +29,7 @@ export class CreateComponent implements OnInit {
     createUser(){
     // on consomme notre service qui a comme arguments les valuers du formulaire
     this.usersService
-    .createUser(this.formCreate.name,this.formCreate.username,this.formCreate.website);
+    .createUser(this.formCreate.name,this.formCreate.username,this.formCreate.website, this.formCreate.mail, this.formCreate.phone);
     }
 
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Http, Headers, Response, RequestOptions, RequestMethod } from '@angular/http';
 import { Router } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
 
 @Injectable()
 export class ProjectsService {
@@ -28,11 +29,14 @@ getProject(id){
     return this.http.get(this.apiUrl+id);
 }
 
-createProject(name,description,status){
+createProject(name,description, currency, startingDate, endingDate, status){
     const payload =
         {
           "name":name,
           "description":description,
+          "currency": currency,
+          "startingDate":startingDate,
+          "endingDate":endingDate,
           "status":status
         }
 
@@ -48,12 +52,15 @@ createProject(name,description,status){
     );
 }
 
-updatedProject(name,description,status,id){
+updatedProject(name,description, currency, startingDate, endingDate, status,id){
 
     const payload =
         {
           "name":name,
           'description':description,
+          "currency": currency,
+          "startingDate":startingDate,
+          "endingDate":endingDate,
           "status":status
         }
 

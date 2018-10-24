@@ -14,7 +14,9 @@ export class UpdateComponent implements OnInit {
     formUpdate={
         name:"",
         username:"",
-        website:""
+        website:"",
+        mail:"",
+        phone:""
     }
 
   constructor(private usersService:UsersService,private route:ActivatedRoute) {
@@ -34,7 +36,7 @@ export class UpdateComponent implements OnInit {
   }
   updateUser(id){
       this.usersService
-      .updatedUser(this.formUpdate.name,this.formUpdate.username,this.formUpdate.website,this.userId)      
+      .updatedUser(this.formUpdate.name,this.formUpdate.username,this.formUpdate.website,this.userId, this.formUpdate.mail, this.formUpdate.phone)      
   }
 
 }

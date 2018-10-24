@@ -9,10 +9,12 @@ import {Router} from '@angular/router';
 })
 export class CreateProjectComponent implements OnInit {
 
-    // création de l'objet formCreate dans lequel nous allons mettre les valeurs de l'input - voir html
     formCreate={
     name:"",
     description:"",
+    startingDate:"",
+    endingDate:"",
+    currency: "",
     status:""
     }
 
@@ -26,7 +28,7 @@ export class CreateProjectComponent implements OnInit {
     createProject(){
 
     this.projectsService
-    .createProject(this.formCreate.name,this.formCreate.description,this.formCreate.status);
+    .createProject(this.formCreate.name,this.formCreate.description, this.formCreate.currency, this.formCreate.startingDate, this.formCreate.endingDate, this.formCreate.status);
     }
 
 }

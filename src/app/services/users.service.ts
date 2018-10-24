@@ -27,12 +27,14 @@ getUser(id){
     return this.http.get(this.apiUrl+id);
 }
 
-createUser(username,name,website){
+createUser(username,name,website, mail, phone){
     const payload =
         {
           "name":username,
           "username":name,
-          "website":website
+          "website":website,
+          "mail":mail,
+          "phone":phone
         }
 
     this.datatopost=JSON.stringify(payload);
@@ -47,13 +49,15 @@ createUser(username,name,website){
     );
 }
 
-updatedUser(username,name,website,id){
+updatedUser(username,name,website,id, mail, phone){
 
     const payload =
         {
           "name":username,
           'username':name,
-          "website":website
+          "website":website,
+          "mail":mail,
+          "phone":phone
         }
 
         this.datatopost=JSON.stringify(payload);

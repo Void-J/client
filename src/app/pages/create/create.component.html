@@ -1,12 +1,9 @@
-<!-- formulaire de création d'un user -->
 <form>
     <div class="row">
 
         <div class="col">
             <div class="form-group">
                 <label>Nom</label>
-
-                <!-- voir "value" et "(change)" -->
                 <input type="text" class="form-control" placeholder="Nom" [value]="formCreate.name" (change)="formCreate.name = $event.target.value">
             </div>
         </div>
@@ -21,13 +18,25 @@
         </div>
         <div class="col">
             <div class="form-group">
-                <label>Website</label>
-                <input type="text" class="form-control" placeholder="Website" [value]="formCreate.website" (change)="formCreate.website = $event.target.value">
+                <label>Entreprise</label>
+                <input type="text" class="form-control" placeholder="Entreprise" [value]="formCreate.website" (change)="formCreate.website = $event.target.value">
             </div>
         </div>
     </div>
-
-    <!-- bouton d'ajout, utiliser la fonction (click) -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" placeholder="email" [value]="formCreate.mail" (change)="formCreate.mail = $event.target.value">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Téléphone</label>
+                <input type="text" class="form-control" placeholder="téléphone" [value]="formCreate.phone" (change)="formCreate.phone = $event.target.value">
+            </div>
+        </div>
+    </div>
     <button type="button" name="button" class="btn btn-info" (click)=createUser()>Ajouter</button>
 
 </form>

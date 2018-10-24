@@ -1,9 +1,18 @@
-<h1>Trélo</h1>
-<p>Trélo est une application de gestion de projet</p>
+<div class="container">
+    <p>Trélo est une application de gestion de projet</p>
 
-<a routerLink="/users" class="btn btn-primary">
-    liste des utilisateurs
-</a>
-<a routerLink="/projects" class="btn btn-primary">
-    liste des projets
-</a>
+    <a routerLink="/users" class="btn">
+    liste des utilisateurs</a>
+    <a routerLink="/projects" class="btn">
+    liste des projets</a>
+
+    <div class="counter">
+        <br>
+        <div class="text">Nombre de projets actifs :
+            <p class="number">{{projects.length}}</p>
+        </div>
+        <div class="text">Nombre d'utilisateurs :
+            <p class="number">{{users.length}} </p>
+        </div>
+    </div>
+</div>

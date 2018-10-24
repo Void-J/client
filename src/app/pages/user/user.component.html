@@ -1,34 +1,44 @@
-
 <div class="user-details" *ngIf="user">
 
     <h4 class="mb-5">Profil de {{user.title}}</h4>
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col-xs-12 col-md-2">
-                <strong>Name</strong>
-            </div>
-            <div class="col-xs-12 col-md-10">
-                {{user.name|uppercase}}
-            </div>
-            <div class="col-xs-12 col-md-2">
-                <strong>Username</strong>
-            </div>
-            <div class="col-xs-12 col-md-10">
-                {{user.username}}
-            </div>
-            <div class="col-xs-12 col-md-2">
-                <strong>website</strong>
-            </div>
-            <div class="col-xs-12 col-md-10">
-                {{user.website}}
-            </div>
+        <div class="col-xs-12 col-md-2">
+            <strong>Name</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{user.name|uppercase}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+            <strong>Username</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{user.username}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+            <strong>website</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{user.website}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+            <strong>Email</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{user.mail}}
+        </div>
+        <div class="col-xs-12 col-md-2">
+            <strong>phone</strong>
+        </div>
+        <div class="col-xs-12 col-md-10">
+            {{user.phone}}
+        </div>
+    </div>
 
-        </div>
-        
-        <div class="mt-5">
-            <a routerLink="/update/{{user._id}}" class="btn btn-primary">Modifier cet utilisateur</a>
-            <button type="button" name="button" class="btn btn-danger" (click)="deleteUser(user.id)">Supprimer cet utilisateur</button>
-        </div>
+    <div class="mt-5">
+        <a routerLink="/update/{{user._id}}" class="btn btn-primary">Modifier cet utilisateur</a>
+        <button type="button" name="button" class="btn btn-danger" (click)="deleteUser(user.id)">Supprimer cet utilisateur</button>
+    </div>
 
 </div>

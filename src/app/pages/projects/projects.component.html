@@ -4,31 +4,35 @@
     <p>{{projects.length}} projets</p>
 </div>
 
-<div class="mt-5 mb-5">
+<div class="add">
     <a routerLink='/create-project' class="btn btn-info">ajouter un projet</a>
 </div>
 
 <table class="table">
 
     <tr>
-        <td>id</td>
-        <td>name</td>
-        <td>descirption</td>
-        <td>status</td>
+        <td>Nom</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td>Montant</td>
+        <td>Date de début</td>
+        <td>Date de fin</td>
         <td></td>
     </tr>
 
     <tbody>
         <tr *ngFor="let project of projects">
-            <td>{{project._id}}</td>
             <td>{{project.name}}</td>
             <td>{{project.description}}</td>
             <td>{{project.status}}</td>
+            <td>{{project.currency}}</td>
+            <td>{{project.startingDate}}</td>
+            <td>{{project.endingDate}}</td>
             <td>
-                <a routerLink="/project/{{project._id}}" class="btn btn-primary">Ajouter un client</a>
-                <a routerLink="/project/{{project._id}}" class="btn btn-primary">voir profil</a>
-                <a routerLink="/update-project/{{project._id}}" class="btn btn-secondary"><i class="material-icons">edit</i></a>
-                <a class="btn btn-secondary"> <i class="material-icons" (click)="deleteProject(project._id)">delete</i></a>
+                <a routerLink="/project/{{project._id}}" class="btn">Ajouter un client</a>
+                <a routerLink="/project/{{project._id}}" class="btn">voir fiche</a>
+                <a routerLink="/update-project/{{project._id}}" class="edit-icon"><i class="material-icons">edit</i></a>
+                <a class="delete-icon"> <i class="material-icons" (click)="deleteProject(project._id)">delete</i></a>
             </td>
         </tr>
     </tbody>
